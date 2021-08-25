@@ -44,3 +44,8 @@ const data = {api: {name: 'ansj', age: 21}}
 Object.assign(Api, data)
 console.log("!!!!!!!!!!!!!!!!!!!!!!!!")
 console.log(`abc ${Api.api.name}${Api.api.age}`)
+
+const imsi = {hello: {name: 'world', age: 99}}
+Object.assign(Api, imsi)
+console.log(`hello world ${Api.hello.name}${Api.hello.age}`)
+console.log(`abc ${Api.api.name}${Api.api.age}`)
