@@ -24,7 +24,7 @@ namespace Validation{
 
 let strings = ["Hello", "98052", "101"]
 
-let validators:{[s:string]:Validation.StringValidator} = {};
+let validators:{[s:string]:Validation.StringValidator} = {"hi": new Validation.LettersOnlyValidator()};
 validators["ZIP code"] = new Validation.ZipCodeValidator();
 validators["Letters only"] = new Validation.LettersOnlyValidator();
 
@@ -33,3 +33,14 @@ for(let s of strings){
         console.log(`${ s } - ${ validators[name].isAcceptable(s) ? "matches" : "does not match" } ${ name }`)
     }
 }
+interface IApi {
+    [api: string]: {
+        name: string,
+        age: number
+    }
+}
+const Api: IApi = {}
+const data = {api: {name: 'ansj', age: 21}}
+Object.assign(Api, data)
+console.log("!!!!!!!!!!!!!!!!!!!!!!!!")
+console.log(`abc ${Api.api.name}${Api.api.age}`)
