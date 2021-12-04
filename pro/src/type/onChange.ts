@@ -1,0 +1,1 @@
+export declare function onChange<K extends keyof JWT>(key: K, value: JWT[K]): void;
