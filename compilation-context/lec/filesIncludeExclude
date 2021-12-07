@@ -1,0 +1,16 @@
+files, include, exclude
+셋다 설정이 없으면, 전부 컴파일 시도
+files
+-상대 혹은 절대 경로의 리스트 배열
+-exclude보다 강력
+
+include
+-glob 패턴(마치 .gitignore)
+-exclude보다 약함
+-*같은 것을 사용하면, .ts, .tsx, .d.ts만 include함(allowJS)
+
+exclude
+-glob패턴
+-설정 안하면 4가지(node_modules, bower_components, jspm_packages, <outDir>)를 default로 제외함
+-<outDir>은 항상 제외(include에 있어도)
+  

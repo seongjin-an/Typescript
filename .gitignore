@@ -1,4 +1,5 @@
 /basic/node_modules/
 /pro/node_modules/
 /basic/dist/
-
+/typescript/node_modules/
+/compilation-context/node_modules/

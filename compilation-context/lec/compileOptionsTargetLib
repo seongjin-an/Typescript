@@ -1,0 +1,12 @@
+target
+ 빌드의 결과물을 어떤 버전으로 할 것이냐
+ 지정 안하면 es3
+
+lib
+ 기본 type definition 라이브러리를 어떤 것을 사용할 것인지
+ lib를 지정하지 않으면
+  target이 es3이고, 디폴트로 lib.d.ts를 사용함
+  target이 es5이면, 디폴트로 dom, es5, scripthost를 사용
+  target이 es6이면, 디폴트로 dom, es6, iterable, scripthost를 사용
+ lib를 지정하면 그 lib 배열로만 라이브러리를 사용함
+  빈 [] => 'no definition found...'
